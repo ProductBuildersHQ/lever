@@ -1,0 +1,67 @@
+{
+  "name": "@productbuildershq/lever",
+  "version": "0.1.0",
+  "description": "LEVER Capability Framework - TypeScript types and Zod schemas",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/lever.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/lever.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./zod": {
+      "types": "./dist/lever.d.ts",
+      "import": "./dist/lever.zod.js"
+    },
+    "./profile": {
+      "types": "./dist/profile.d.ts",
+      "import": "./dist/profile.zod.js"
+    },
+    "./types": {
+      "types": "./dist/lever.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "schema"
+  ],
+  "scripts": {
+    "generate:schema": "go run ./cmd/lever schema > schema/lever.schema.json && go run ./cmd/lever profile-schema > schema/profile.schema.json",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build",
+    "test:go": "go test -v ./...",
+    "test": "npm run typecheck && npm run test:go"
+  },
+  "keywords": [
+    "lever",
+    "capability",
+    "framework",
+    "learning",
+    "mastery",
+    "zod",
+    "schema",
+    "bloom",
+    "dreyfus"
+  ],
+  "author": "ProductBuildersHQ",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ProductBuildersHQ/lever.git"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "zod": "^3.25.76"
+  },
+  "peerDependencies": {
+    "zod": "^3.25.76"
+  },
+  "peerDependenciesMeta": {
+    "zod": {
+      "optional": true
+    }
+  }
+}
