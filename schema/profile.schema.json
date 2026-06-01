@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://productbuildershq.com/schemas/profile.schema.json",
+  "$ref": "#/$defs/Profile",
+  "$defs": {
+    "Competency": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "indicators": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description"
+      ]
+    },
+    "Profile": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "domain": {
+          "type": "string"
+        },
+        "stage_interpretations": {
+          "items": {
+            "$ref": "#/$defs/StageInterpretation"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description",
+        "domain",
+        "stage_interpretations"
+      ]
+    },
+    "StageInterpretation": {
+      "properties": {
+        "stage_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "competencies": {
+          "items": {
+            "$ref": "#/$defs/Competency"
+          },
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "examples": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "stage_id",
+        "description"
+      ]
+    }
+  },
+  "title": "LEVER Profile",
+  "description": "A domain-specific interpretation of LEVER stages"
+}

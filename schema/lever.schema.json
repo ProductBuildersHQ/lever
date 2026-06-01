@@ -1,0 +1,340 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://productbuildershq.com/schemas/lever.schema.json",
+  "$ref": "#/$defs/Spec",
+  "$defs": {
+    "Competency": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "indicators": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description"
+      ]
+    },
+    "Framework": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "origin": {
+          "type": "string"
+        },
+        "primary_focus": {
+          "type": "string"
+        },
+        "stages": {
+          "items": {
+            "$ref": "#/$defs/FrameworkStage"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description",
+        "origin",
+        "primary_focus",
+        "stages"
+      ]
+    },
+    "FrameworkMappings": {
+      "properties": {
+        "framework_id": {
+          "type": "string"
+        },
+        "mappings": {
+          "items": {
+            "$ref": "#/$defs/StageMapping"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "framework_id",
+        "mappings"
+      ]
+    },
+    "FrameworkStage": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "order": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "order",
+        "description"
+      ]
+    },
+    "MappingRow": {
+      "properties": {
+        "lever_stage": {
+          "type": "string"
+        },
+        "cells": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "lever_stage",
+        "cells"
+      ]
+    },
+    "MappingTable": {
+      "properties": {
+        "frameworks": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "rows": {
+          "items": {
+            "$ref": "#/$defs/MappingRow"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "frameworks",
+        "rows"
+      ]
+    },
+    "Profile": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "domain": {
+          "type": "string"
+        },
+        "stage_interpretations": {
+          "items": {
+            "$ref": "#/$defs/StageInterpretation"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description",
+        "domain",
+        "stage_interpretations"
+      ]
+    },
+    "Spec": {
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "stages": {
+          "items": {
+            "$ref": "#/$defs/Stage"
+          },
+          "type": "array"
+        },
+        "frameworks": {
+          "items": {
+            "$ref": "#/$defs/Framework"
+          },
+          "type": "array"
+        },
+        "mappings": {
+          "items": {
+            "$ref": "#/$defs/FrameworkMappings"
+          },
+          "type": "array"
+        },
+        "mapping_table": {
+          "$ref": "#/$defs/MappingTable"
+        },
+        "reference_profiles": {
+          "items": {
+            "$ref": "#/$defs/Profile"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "version",
+        "name",
+        "description",
+        "stages",
+        "frameworks",
+        "mappings",
+        "mapping_table"
+      ]
+    },
+    "Stage": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "order": {
+          "type": "integer"
+        },
+        "question": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "characteristics": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "order",
+        "question",
+        "output",
+        "description"
+      ]
+    },
+    "StageInterpretation": {
+      "properties": {
+        "stage_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "competencies": {
+          "items": {
+            "$ref": "#/$defs/Competency"
+          },
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "examples": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "stage_id",
+        "description"
+      ]
+    },
+    "StageMapping": {
+      "properties": {
+        "lever_stage": {
+          "type": "string"
+        },
+        "framework_id": {
+          "type": "string"
+        },
+        "framework_stages": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "lever_stage",
+        "framework_id",
+        "framework_stages"
+      ]
+    }
+  },
+  "title": "LEVER Capability Framework",
+  "description": "LEVER (Learn, Execute, Value, Enable, Replicate) is a capability multiplication framework that synthesizes classical learning models (Bloom's Taxonomy, Dreyfus Model, Shu-Ha-Ri, Apprenticeship) for the AI era. It describes how individuals progress from acquiring knowledge to creating value, enabling others, and ultimately replicating capability through systems, automation, AI agents, platforms, and institutions."
+}
