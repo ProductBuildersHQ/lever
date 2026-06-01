@@ -1,0 +1,748 @@
+{
+  "version": "0.1.0",
+  "name": "LEVER Capability Framework",
+  "description": "LEVER (Learn, Execute, Value, Enable, Replicate) is a capability multiplication framework that synthesizes classical learning models (Bloom's Taxonomy, Dreyfus Model, Shu-Ha-Ri, Apprenticeship) for the AI era. It describes how individuals progress from acquiring knowledge to creating value, enabling others, and ultimately replicating capability through systems, automation, AI agents, platforms, and institutions.",
+  "stages": [
+    {
+      "id": "learn",
+      "name": "Learn",
+      "order": 1,
+      "question": "What do I know?",
+      "output": "Knowledge",
+      "description": "Acquire knowledge through study, observation, and instruction. Build vocabulary, concepts, and mental models. This is the foundation of all capability development.",
+      "characteristics": [
+        "Studies concepts and terminology",
+        "Follows instructions and tutorials",
+        "Asks questions to understand",
+        "Builds foundational mental models"
+      ]
+    },
+    {
+      "id": "execute",
+      "name": "Execute",
+      "order": 2,
+      "question": "What can I do?",
+      "output": "Results",
+      "description": "Apply knowledge to produce work. Move from theory to practice. Requires guidance and supervision but can complete defined tasks.",
+      "characteristics": [
+        "Completes assigned tasks",
+        "Applies learned techniques",
+        "Requires supervision and guidance",
+        "Produces work product with support"
+      ]
+    },
+    {
+      "id": "value",
+      "name": "Value",
+      "order": 3,
+      "question": "Can I independently create outcomes?",
+      "output": "Measurable outcomes",
+      "description": "Demonstrate independent ability to create value. Operate without supervision. Make decisions and own results. This is where practitioners become trusted contributors.",
+      "characteristics": [
+        "Works independently",
+        "Makes sound decisions",
+        "Delivers measurable outcomes",
+        "Earns trust through results",
+        "Solves problems autonomously"
+      ]
+    },
+    {
+      "id": "enable",
+      "name": "Enable",
+      "order": 4,
+      "question": "Can I make others successful?",
+      "output": "Capable people",
+      "description": "Develop other people's capabilities. Mentor, coach, teach, and lead. Output shifts from personal work to growing others. This is where practitioners become leaders.",
+      "characteristics": [
+        "Mentors and coaches others",
+        "Teaches effectively",
+        "Builds team capability",
+        "Multiplies impact through people",
+        "Creates psychological safety"
+      ]
+    },
+    {
+      "id": "replicate",
+      "name": "Replicate",
+      "order": 5,
+      "question": "Can I make success repeatable at scale?",
+      "output": "Systems",
+      "description": "Create systems that multiply capability beyond direct human interaction. Build platforms, standards, frameworks, AI agents, automation, and institutions that enable many others to succeed. This is the AI-era extension of classical mastery models.",
+      "characteristics": [
+        "Creates reusable frameworks",
+        "Builds platforms and tools",
+        "Defines standards and best practices",
+        "Develops AI agents and automation",
+        "Establishes institutions and communities",
+        "Scales impact through systems"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "id": "bloom",
+      "name": "Bloom's Taxonomy",
+      "description": "A hierarchical model of cognitive learning objectives widely used in education.",
+      "origin": "Benjamin Bloom, 1956 (revised 2001)",
+      "primary_focus": "Cognitive mastery levels",
+      "stages": [
+        {
+          "id": "remember",
+          "name": "Remember",
+          "order": 1,
+          "description": "Recall facts and basic concepts"
+        },
+        {
+          "id": "understand",
+          "name": "Understand",
+          "order": 2,
+          "description": "Explain ideas or concepts"
+        },
+        {
+          "id": "apply",
+          "name": "Apply",
+          "order": 3,
+          "description": "Use information in new situations"
+        },
+        {
+          "id": "analyze",
+          "name": "Analyze",
+          "order": 4,
+          "description": "Draw connections among ideas"
+        },
+        {
+          "id": "evaluate",
+          "name": "Evaluate",
+          "order": 5,
+          "description": "Justify a decision or course of action"
+        },
+        {
+          "id": "create",
+          "name": "Create",
+          "order": 6,
+          "description": "Produce new or original work"
+        }
+      ]
+    },
+    {
+      "id": "dreyfus",
+      "name": "Dreyfus Model of Skill Acquisition",
+      "description": "A model describing how students acquire skills through formal instruction and practice.",
+      "origin": "Stuart and Hubert Dreyfus, 1980",
+      "primary_focus": "Skill acquisition and independence",
+      "stages": [
+        {
+          "id": "novice",
+          "name": "Novice",
+          "order": 1,
+          "description": "Follows rules exactly, requires explicit instructions"
+        },
+        {
+          "id": "advanced-beginner",
+          "name": "Advanced Beginner",
+          "order": 2,
+          "description": "Recognizes patterns from experience"
+        },
+        {
+          "id": "competent",
+          "name": "Competent",
+          "order": 3,
+          "description": "Plans and prioritizes, manages complexity"
+        },
+        {
+          "id": "proficient",
+          "name": "Proficient",
+          "order": 4,
+          "description": "Sees situations holistically, knows what matters"
+        },
+        {
+          "id": "expert",
+          "name": "Expert",
+          "order": 5,
+          "description": "Operates intuitively, transcends rules"
+        }
+      ]
+    },
+    {
+      "id": "shu-ha-ri",
+      "name": "Shu-Ha-Ri",
+      "description": "A Japanese martial arts concept describing stages of learning to mastery.",
+      "origin": "Japanese martial arts tradition, popularized by Alistair Cockburn in software",
+      "primary_focus": "Relationship to rules and tradition",
+      "stages": [
+        {
+          "id": "shu",
+          "name": "Shu (守)",
+          "order": 1,
+          "description": "Obey - Follow the rules exactly, learn the forms"
+        },
+        {
+          "id": "ha",
+          "name": "Ha (破)",
+          "order": 2,
+          "description": "Detach - Break from tradition, understand when rules bend"
+        },
+        {
+          "id": "ri",
+          "name": "Ri (離)",
+          "order": 3,
+          "description": "Transcend - Create your own approach, rules become instinct"
+        }
+      ]
+    },
+    {
+      "id": "apprenticeship",
+      "name": "Apprenticeship Model",
+      "description": "The traditional craft-based progression from apprentice to master.",
+      "origin": "Medieval guild system, formalized craft traditions",
+      "primary_focus": "Responsibility and teaching progression",
+      "stages": [
+        {
+          "id": "observe",
+          "name": "Observe",
+          "order": 1,
+          "description": "Watch experts perform the craft"
+        },
+        {
+          "id": "assist",
+          "name": "Assist",
+          "order": 2,
+          "description": "Help experts with supervised tasks"
+        },
+        {
+          "id": "perform",
+          "name": "Perform",
+          "order": 3,
+          "description": "Work independently on full tasks"
+        },
+        {
+          "id": "lead",
+          "name": "Lead",
+          "order": 4,
+          "description": "Guide others, take responsibility for outcomes"
+        },
+        {
+          "id": "teach",
+          "name": "Teach",
+          "order": 5,
+          "description": "Train apprentices, preserve and advance the craft"
+        }
+      ]
+    },
+    {
+      "id": "conscious-competence",
+      "name": "Conscious Competence Model",
+      "description": "A model describing the psychological states in learning a new skill.",
+      "origin": "Noel Burch, Gordon Training International, 1970s",
+      "primary_focus": "Awareness of own competence",
+      "stages": [
+        {
+          "id": "unconscious-incompetence",
+          "name": "Unconscious Incompetence",
+          "order": 1,
+          "description": "Don't know what you don't know"
+        },
+        {
+          "id": "conscious-incompetence",
+          "name": "Conscious Incompetence",
+          "order": 2,
+          "description": "Aware of skill gap, learning begins"
+        },
+        {
+          "id": "conscious-competence",
+          "name": "Conscious Competence",
+          "order": 3,
+          "description": "Can perform with deliberate effort"
+        },
+        {
+          "id": "unconscious-competence",
+          "name": "Unconscious Competence",
+          "order": 4,
+          "description": "Skill becomes automatic"
+        }
+      ]
+    }
+  ],
+  "mappings": [
+    {
+      "framework_id": "bloom",
+      "mappings": [
+        {
+          "lever_stage": "learn",
+          "framework_id": "bloom",
+          "framework_stages": [
+            "remember",
+            "understand"
+          ],
+          "notes": "Knowledge acquisition covers basic recall and comprehension"
+        },
+        {
+          "lever_stage": "execute",
+          "framework_id": "bloom",
+          "framework_stages": [
+            "apply"
+          ],
+          "notes": "Execution is the application of learned knowledge"
+        },
+        {
+          "lever_stage": "value",
+          "framework_id": "bloom",
+          "framework_stages": [
+            "analyze",
+            "evaluate"
+          ],
+          "notes": "Creating value requires analysis and judgment"
+        },
+        {
+          "lever_stage": "enable",
+          "framework_id": "bloom",
+          "framework_stages": [
+            "create"
+          ],
+          "notes": "Enabling others often requires creating new approaches"
+        },
+        {
+          "lever_stage": "replicate",
+          "framework_id": "bloom",
+          "framework_stages": [],
+          "notes": "Beyond Bloom - multiplication through systems is not addressed"
+        }
+      ]
+    },
+    {
+      "framework_id": "dreyfus",
+      "mappings": [
+        {
+          "lever_stage": "learn",
+          "framework_id": "dreyfus",
+          "framework_stages": [
+            "novice"
+          ],
+          "notes": "Novices are learning rules and fundamentals"
+        },
+        {
+          "lever_stage": "execute",
+          "framework_id": "dreyfus",
+          "framework_stages": [
+            "advanced-beginner",
+            "competent"
+          ],
+          "notes": "Execution spans pattern recognition to planning"
+        },
+        {
+          "lever_stage": "value",
+          "framework_id": "dreyfus",
+          "framework_stages": [
+            "proficient",
+            "expert"
+          ],
+          "notes": "Value creation requires holistic understanding and intuition"
+        },
+        {
+          "lever_stage": "enable",
+          "framework_id": "dreyfus",
+          "framework_stages": [],
+          "notes": "Not directly addressed - often called 'Master' in extensions"
+        },
+        {
+          "lever_stage": "replicate",
+          "framework_id": "dreyfus",
+          "framework_stages": [],
+          "notes": "Beyond Dreyfus - some extensions add 'Teacher' level"
+        }
+      ]
+    },
+    {
+      "framework_id": "shu-ha-ri",
+      "mappings": [
+        {
+          "lever_stage": "learn",
+          "framework_id": "shu-ha-ri",
+          "framework_stages": [
+            "shu"
+          ],
+          "notes": "Shu is about learning and following the forms"
+        },
+        {
+          "lever_stage": "execute",
+          "framework_id": "shu-ha-ri",
+          "framework_stages": [
+            "shu"
+          ],
+          "notes": "Still within Shu - applying the learned forms"
+        },
+        {
+          "lever_stage": "value",
+          "framework_id": "shu-ha-ri",
+          "framework_stages": [
+            "ha"
+          ],
+          "notes": "Ha - breaking from tradition, understanding context"
+        },
+        {
+          "lever_stage": "enable",
+          "framework_id": "shu-ha-ri",
+          "framework_stages": [
+            "ri"
+          ],
+          "notes": "Ri practitioners often become teachers"
+        },
+        {
+          "lever_stage": "replicate",
+          "framework_id": "shu-ha-ri",
+          "framework_stages": [
+            "ri"
+          ],
+          "notes": "Advanced Ri - creating new schools and approaches"
+        }
+      ]
+    },
+    {
+      "framework_id": "apprenticeship",
+      "mappings": [
+        {
+          "lever_stage": "learn",
+          "framework_id": "apprenticeship",
+          "framework_stages": [
+            "observe"
+          ],
+          "notes": "Observation is the primary learning mechanism"
+        },
+        {
+          "lever_stage": "execute",
+          "framework_id": "apprenticeship",
+          "framework_stages": [
+            "assist",
+            "perform"
+          ],
+          "notes": "Execution spans assisted to independent work"
+        },
+        {
+          "lever_stage": "value",
+          "framework_id": "apprenticeship",
+          "framework_stages": [
+            "perform"
+          ],
+          "notes": "Full independent performance with proven results"
+        },
+        {
+          "lever_stage": "enable",
+          "framework_id": "apprenticeship",
+          "framework_stages": [
+            "lead",
+            "teach"
+          ],
+          "notes": "Leading and teaching others"
+        },
+        {
+          "lever_stage": "replicate",
+          "framework_id": "apprenticeship",
+          "framework_stages": [
+            "teach"
+          ],
+          "notes": "Master teachers who create schools and guilds"
+        }
+      ]
+    },
+    {
+      "framework_id": "conscious-competence",
+      "mappings": [
+        {
+          "lever_stage": "learn",
+          "framework_id": "conscious-competence",
+          "framework_stages": [
+            "unconscious-incompetence",
+            "conscious-incompetence"
+          ],
+          "notes": "Learning begins with awareness of the gap"
+        },
+        {
+          "lever_stage": "execute",
+          "framework_id": "conscious-competence",
+          "framework_stages": [
+            "conscious-competence"
+          ],
+          "notes": "Deliberate, effortful performance"
+        },
+        {
+          "lever_stage": "value",
+          "framework_id": "conscious-competence",
+          "framework_stages": [
+            "unconscious-competence"
+          ],
+          "notes": "Automatic, reliable performance"
+        },
+        {
+          "lever_stage": "enable",
+          "framework_id": "conscious-competence",
+          "framework_stages": [],
+          "notes": "Often called 'Reflective Mastery' in extensions"
+        },
+        {
+          "lever_stage": "replicate",
+          "framework_id": "conscious-competence",
+          "framework_stages": [],
+          "notes": "Beyond the model - requires conscious articulation"
+        }
+      ]
+    }
+  ],
+  "mapping_table": {
+    "frameworks": [
+      "bloom",
+      "dreyfus",
+      "shu-ha-ri",
+      "apprenticeship",
+      "conscious-competence"
+    ],
+    "rows": [
+      {
+        "lever_stage": "learn",
+        "cells": {
+          "apprenticeship": [
+            "observe"
+          ],
+          "bloom": [
+            "remember",
+            "understand"
+          ],
+          "conscious-competence": [
+            "unconscious-incompetence",
+            "conscious-incompetence"
+          ],
+          "dreyfus": [
+            "novice"
+          ],
+          "shu-ha-ri": [
+            "shu"
+          ]
+        }
+      },
+      {
+        "lever_stage": "execute",
+        "cells": {
+          "apprenticeship": [
+            "assist",
+            "perform"
+          ],
+          "bloom": [
+            "apply"
+          ],
+          "conscious-competence": [
+            "conscious-competence"
+          ],
+          "dreyfus": [
+            "advanced-beginner",
+            "competent"
+          ],
+          "shu-ha-ri": [
+            "shu"
+          ]
+        }
+      },
+      {
+        "lever_stage": "value",
+        "cells": {
+          "apprenticeship": [
+            "perform"
+          ],
+          "bloom": [
+            "analyze",
+            "evaluate"
+          ],
+          "conscious-competence": [
+            "unconscious-competence"
+          ],
+          "dreyfus": [
+            "proficient",
+            "expert"
+          ],
+          "shu-ha-ri": [
+            "ha"
+          ]
+        }
+      },
+      {
+        "lever_stage": "enable",
+        "cells": {
+          "apprenticeship": [
+            "lead",
+            "teach"
+          ],
+          "bloom": [
+            "create"
+          ],
+          "conscious-competence": [],
+          "dreyfus": [],
+          "shu-ha-ri": [
+            "ri"
+          ]
+        }
+      },
+      {
+        "lever_stage": "replicate",
+        "cells": {
+          "apprenticeship": [
+            "teach"
+          ],
+          "bloom": [],
+          "conscious-competence": [],
+          "dreyfus": [],
+          "shu-ha-ri": [
+            "ri"
+          ]
+        }
+      }
+    ]
+  },
+  "reference_profiles": [
+    {
+      "id": "product-builder",
+      "name": "Product Builder",
+      "description": "LEVER interpretation for Product Builders - individuals who own end-to-end product outcomes.",
+      "domain": "product",
+      "stage_interpretations": [
+        {
+          "stage_id": "learn",
+          "title": "Learner",
+          "description": "Acquiring product, technology, and business knowledge.",
+          "evidence": [
+            "Completes relevant courses and certifications",
+            "Studies successful products and case studies",
+            "Learns technical fundamentals (coding, AI, tools)",
+            "Understands business models and metrics"
+          ],
+          "examples": [
+            "Takes product management courses",
+            "Learns to use AI coding assistants",
+            "Studies customer discovery techniques"
+          ]
+        },
+        {
+          "stage_id": "execute",
+          "title": "Practitioner",
+          "description": "Building prototypes and MVPs with guidance.",
+          "evidence": [
+            "Creates functional prototypes",
+            "Uses AI tools to accelerate development",
+            "Completes features with supervision",
+            "Participates in product delivery"
+          ],
+          "examples": [
+            "Builds an internal tool with AI assistance",
+            "Ships a feature to production",
+            "Conducts user interviews"
+          ]
+        },
+        {
+          "stage_id": "value",
+          "title": "Builder",
+          "description": "Independently delivering products that create business value.",
+          "evidence": [
+            "Ships products without supervision",
+            "Drives measurable business outcomes",
+            "Makes sound product decisions",
+            "Owns the full product lifecycle"
+          ],
+          "examples": [
+            "Launches a product that acquires users",
+            "Improves key metrics through product changes",
+            "Manages a product roadmap independently"
+          ]
+        },
+        {
+          "stage_id": "enable",
+          "title": "Leader",
+          "description": "Developing other Product Builders.",
+          "evidence": [
+            "Mentors junior builders",
+            "Creates learning opportunities",
+            "Builds high-performing teams",
+            "Establishes product practices"
+          ],
+          "examples": [
+            "Mentors a practitioner to builder level",
+            "Runs product craft sessions",
+            "Defines team product processes"
+          ]
+        },
+        {
+          "stage_id": "replicate",
+          "title": "Multiplier",
+          "description": "Creating systems that scale product capability.",
+          "evidence": [
+            "Creates reusable frameworks and playbooks",
+            "Builds AI-powered product tools",
+            "Defines organizational standards",
+            "Establishes product communities"
+          ],
+          "examples": [
+            "Creates a product requirements AI agent",
+            "Writes a product playbook adopted by teams",
+            "Establishes a product guild or community",
+            "Builds a platform used by other builders"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engineer",
+      "name": "Software Engineer",
+      "description": "LEVER interpretation for software engineers building production systems.",
+      "domain": "engineering",
+      "stage_interpretations": [
+        {
+          "stage_id": "learn",
+          "title": "Junior Engineer",
+          "description": "Learning fundamentals of software development.",
+          "evidence": [
+            "Completes coding tutorials and courses",
+            "Understands basic CS concepts",
+            "Learns team tools and practices"
+          ]
+        },
+        {
+          "stage_id": "execute",
+          "title": "Engineer",
+          "description": "Implementing features and fixing bugs with guidance.",
+          "evidence": [
+            "Completes assigned tasks",
+            "Writes code that passes review",
+            "Debugs issues with support"
+          ]
+        },
+        {
+          "stage_id": "value",
+          "title": "Senior Engineer",
+          "description": "Independently delivering significant technical work.",
+          "evidence": [
+            "Owns technical decisions",
+            "Delivers complex features",
+            "Mentors junior engineers informally"
+          ]
+        },
+        {
+          "stage_id": "enable",
+          "title": "Staff Engineer",
+          "description": "Elevating team capability and technical direction.",
+          "evidence": [
+            "Sets technical direction",
+            "Mentors multiple engineers",
+            "Leads technical initiatives"
+          ]
+        },
+        {
+          "stage_id": "replicate",
+          "title": "Principal/Architect",
+          "description": "Creating systems that multiply engineering capability.",
+          "evidence": [
+            "Creates reusable platforms",
+            "Defines engineering standards",
+            "Builds tools used across teams",
+            "Establishes technical communities"
+          ]
+        }
+      ]
+    }
+  ]
+}
