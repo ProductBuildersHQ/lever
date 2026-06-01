@@ -1,0 +1,54 @@
+{
+  "irVersion": "1.0",
+  "project": "lever",
+  "repository": "https://github.com/ProductBuildersHQ/lever",
+  "versioning": "semver",
+  "commitConvention": "conventional",
+  "maintainers": ["johncwang@gmail.com"],
+  "releases": [
+    {
+      "version": "v0.1.0",
+      "date": "2026-06-01",
+      "commit": "3cb7165",
+      "highlights": [
+        { "description": "LEVER Capability Framework - a five-stage progression model synthesizing classical learning frameworks for the AI era" },
+        { "description": "Go-first type system with JSON Schema generation and TypeScript/Zod exports" },
+        { "description": "Mappings to 5 classical frameworks: Bloom's Taxonomy, Dreyfus Model, Shu-Ha-Ri, Apprenticeship, Conscious Competence" }
+      ],
+      "added": [
+        { "description": "Core LEVER stage types: Learn, Execute, Value, Enable, Replicate", "commit": "23e8fa7" },
+        { "description": "Classical framework definitions with stage-by-stage mappings", "commit": "e0999a8" },
+        { "description": "Bidirectional LEVER-to-framework mapping system with MappingTable", "commit": "cca01c6" },
+        { "description": "Domain profile types for role-specific LEVER interpretations", "commit": "ef144ad" },
+        { "description": "Complete LEVER specification type combining all components", "commit": "412d6b9" },
+        { "description": "Reference profiles: Product Builder and Software Engineer", "commit": "ef144ad" },
+        { "description": "CLI with `schema`, `profile-schema`, `spec`, `stages`, `mappings`, `version` commands", "commit": "45c5322" },
+        { "description": "JSON Schema generation from Go types via invopop/jsonschema", "commit": "fd639dc" },
+        { "description": "Embedded schema support via `//go:embed` for programmatic access", "commit": "fd639dc" },
+        { "description": "TypeScript interfaces matching Go types", "commit": "cfaeb81" },
+        { "description": "Zod schemas with runtime validation and type inference", "commit": "cfaeb81" },
+        { "description": "Stage progression constants: personal (L-E-V) vs leveraged (E-R)", "commit": "23e8fa7" },
+        { "description": "Output progression mapping: Knowledge → Work → Outcomes → People → Systems", "commit": "23e8fa7" }
+      ],
+      "documentation": [
+        { "description": "README with installation, quick start, and API reference", "commit": "dc9e7d2" },
+        { "description": "Project CLAUDE.md with Go-first workflow documentation", "commit": "dc9e7d2" },
+        { "description": "MkDocs site with Material theme and ProductBuildersHQ styling", "commit": "f3558fb" },
+        { "description": "Stage documentation pages for all 5 LEVER stages", "commit": "f3558fb" },
+        { "description": "Framework mapping documentation with cross-reference tables", "commit": "f3558fb" },
+        { "description": "Domain profile guides for Product Builder and Software Engineer", "commit": "f3558fb" },
+        { "description": "Usage guides for Go library, TypeScript/Zod, and CLI", "commit": "f3558fb" },
+        { "description": "JSON Schema reference documentation", "commit": "f3558fb" },
+        { "description": "Ecosystem integration guide for PBMM, ASDM, PRISM", "commit": "f3558fb" }
+      ],
+      "tests": [
+        { "description": "Comprehensive tests for lever package: stages, frameworks, mappings, profiles, spec", "commit": "dd28e7a" }
+      ],
+      "build": [
+        { "description": "Go module configuration with invopop/jsonschema dependency", "commit": "b0e109b" },
+        { "description": "TypeScript/Zod package.json with build configuration", "commit": "cfaeb81" },
+        { "description": "MkDocs configuration with ProductBuildersHQ unified theme", "commit": "3cb7165" }
+      ]
+    }
+  ]
+}

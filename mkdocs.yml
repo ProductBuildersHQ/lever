@@ -75,6 +75,8 @@ nav:
   - Reference:
       - JSON Schema: reference/schema.md
       - Ecosystem: reference/ecosystem.md
+  - Releases:
+      - v0.1.0: releases/v0.1.0.md
 
 extra:
   social:
