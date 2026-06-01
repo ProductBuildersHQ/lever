@@ -4,82 +4,49 @@ site_url: https://productbuildershq.com/lever
 repo_url: https://github.com/ProductBuildersHQ/lever
 repo_name: ProductBuildersHQ/lever
 
-copyright: Copyright &copy; 2024-2026 ProductBuildersHQ
-
 theme:
   name: material
+  custom_dir: docs/overrides
   palette:
+    # Light mode first (ProductBuildersHQ default)
     - scheme: default
-      primary: indigo
-      accent: amber
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: indigo
-      accent: amber
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.top
-    - search.suggest
     - search.highlight
     - content.code.copy
-    - content.tabs.link
-  icon:
-    repo: fontawesome/brands/github
 
-plugins:
-  - search
-  - tags
+# ProductBuildersHQ Theme Assets (served from main site)
+extra_css:
+  - https://productbuildershq.com/css/productbuildershq-mkdocs.css
+
+extra_javascript:
+  - https://productbuildershq.com/js/site-nav.min.js
+  - https://productbuildershq.com/js/pbhq-nav.js
 
 markdown_extensions:
-  - abbr
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - admonition
-  - attr_list
-  - def_list
-  - footnotes
-  - md_in_html
+  - pymdownx.details
   - tables
   - toc:
       permalink: true
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem
-  - pymdownx.caret
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/ProductBuildersHQ
-    - icon: fontawesome/solid/globe
-      link: https://productbuildershq.com
 
 nav:
   - Home: index.md
@@ -108,3 +75,8 @@ nav:
   - Reference:
       - JSON Schema: reference/schema.md
       - Ecosystem: reference/ecosystem.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ProductBuildersHQ/lever
